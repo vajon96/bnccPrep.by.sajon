@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Hind Siliguri", ui-sans-serif, system-ui, sans-serif;
+  --color-military-green: #2e7d32;
+  --color-military-olive: #689f38;
+  --color-military-maroon: #c62828;
+  --color-vibrant-orange: #ff9800;
+  --color-vibrant-yellow: #fbc02d;
+  --color-vibrant-blue: #0288d1;
+  --color-vibrant-purple: #7b1fa2;
+}
+
+@layer base {
+  body {
+    @apply bg-orange-50 text-slate-900 font-sans;
+  }
+}
+
+.glass-card {
+  @apply bg-white/90 backdrop-blur-md border border-white/40 shadow-xl;
+}
+
+.joyful-gradient {
+  background: linear-gradient(135deg, #2e7d32 0%, #689f38 100%);
+}
+
+.orange-gradient {
+  background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+}
+
+.blue-gradient {
+  background: linear-gradient(135deg, #0288d1 0%, #01579b 100%);
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
